@@ -1,0 +1,38 @@
+{
+  "name": "lbry-sdk-node",
+  "version": "0.1.0",
+  "description": "download and bootstrap lbryio/lbry-sdk releases in nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node download-sdk.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adam-dorin/lbry-sdk-node.git"
+  },
+  "keywords": [
+    "lbry-sdk",
+    "bootstrap",
+    "nodejs",
+    "daemon"
+  ],
+  "author": "Dorin Adam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adam-dorin/lbry-sdk-node/issues"
+  },
+  "homepage": "https://github.com/adam-dorin/lbry-sdk-node#readme",
+  "dependencies": {
+    "find-process": "^1.4.4",
+    "node-fetch": "^2.6.1",
+    "decompress": "^4.2.1",
+    "del": "^6.0.0"
+  },
+  "lbrySettings": {
+    "lbrynetSDKVersion": "0.93.0",
+    "lbrynetSDKUrlTemplate": "https://github.com/lbryio/lbry/releases/download/vSDKVER/lbrynet-OSNAME.zip",
+    "lbrynetSDKDir": "dist/sdk",
+    "lbrynetSDKFileName": "lbrynet"
+  }
+}
