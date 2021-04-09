@@ -1,7 +1,7 @@
 # Lbry SDK NodeJS
 This is small package to download and bootstrap [lbryio/lbry-sdk](https://github.com/lbryio/lbry-sdk) releases in nodejs
 
-Original code is taken from [lbryio/electron-starter](https://github.com/lbryio/electron-starter)
+Original code was taken and adapted from [lbryio/electron-starter](https://github.com/lbryio/electron-starter) and [lbryio/lbry-redux](https://github.com/lbryio/lbry-redux/blob/master/dist/bundle.es.js#L1014)
 
 
 ## TODO:
