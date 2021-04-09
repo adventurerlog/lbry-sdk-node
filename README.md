@@ -1,11 +1,39 @@
 # Lbry SDK NodeJS
-This is small package to download and bootstrap [lbryio/lbry-sdk](https://github.com/lbryio/lbry-sdk) releases in nodejs
 
-Original code was taken and adapted from [lbryio/electron-starter](https://github.com/lbryio/electron-starter) and [lbryio/lbry-redux](https://github.com/lbryio/lbry-redux/blob/master/dist/bundle.es.js#L1014)
+This is small package to download and bootstrap [lbryio/lbry-sdk](https://github.com/lbryio/lbry-sdk) releases in nodejs.
+
+Original code was taken and adapted from [lbryio/electron-starter](https://github.com/lbryio/electron-starter) and [lbryio/lbry-redux](https://github.com/lbryio/lbry-redux/blob/master/dist/bundle.es.js#L1014).
+
+# How this should work?
+
+```bash
+# 1.
+npm install lbry-sdk-node --save
+# After the install an additional script runs that downloads the lbry-sdk (0.93.0)
+```
+
+## Example Usage:
 
 
-## TODO:
-1. ~~Uncouple the code and make it stable [#1](https://github.com/adam-dorin/lbry-sdk-node/issues/1)~~
-2. Test in both windows and linux systems [#2](https://github.com/adam-dorin/lbry-sdk-node/issues/2)
-3. Create npm package [#3](https://github.com/adam-dorin/lbry-sdk-node/issues/3)
-4. Add fluff badges for counts etc. [#4](https://github.com/adam-dorin/lbry-sdk-node/issues/4)
+```javascript
+
+const { Lbry } = require('lbry-sdk-node/lbry');
+const { launchSDK } = require('lbry-sdk-node/start');
+
+const statusCheck = () => Lbry.status().then(status => {
+    console.log(`isRunning ${status.is_running}`)
+    console.log(status);
+})
+const searchClaims = () => Lbry.claim_list().then(claims => {
+    console.log(claims);
+})
+
+launchSDK().then(isSDKRunning => {
+    console.log(`after launch ${isSDKRunning}`);
+    statusCheck();
+    searchClaims();
+}).catch(error => {
+    console.error(error);
+})
+
+```
