@@ -1,6 +1,6 @@
 {
   "name": "lbry-sdk-node",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "download and bootstrap lbryio/lbry-sdk releases in nodejs",
   "main": "index.js",
   "scripts": {
