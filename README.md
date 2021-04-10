@@ -1,6 +1,5 @@
 [![npm version](https://badge.fury.io/js/lbry-sdk-node.svg)](https://badge.fury.io/js/lbry-sdk-node)
 [![npm downloads](https://img.shields.io/npm/dm/lbry-sdk-node.svg?style=flat)](https://npmcharts.com/compare/lbry-sdk-node?minimal=true)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/lbry-sdk-node)](https://bundlephobia.com/result?p=lbry-sdk-node)
 
 # Lbry SDK NodeJS
 
