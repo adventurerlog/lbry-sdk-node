@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adam-dorin/lbry-sdk-node.git"
+    "url": "git+https://github.com/adventurerlog/lbry-sdk-node.git"
   },
   "keywords": [
     "lbry-sdk",
@@ -20,9 +20,9 @@
   "author": "Dorin Adam",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/adam-dorin/lbry-sdk-node/issues"
+    "url": "https://github.com/adventurerlog/lbry-sdk-node/issues"
   },
-  "homepage": "https://github.com/adam-dorin/lbry-sdk-node#readme",
+  "homepage": "https://github.com/adventurerlog/lbry-sdk-node#readme",
   "dependencies": {
     "find-process": "^1.4.4",
     "node-fetch": "^2.6.1",
