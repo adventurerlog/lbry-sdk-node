@@ -5,6 +5,7 @@ const fetch = require("node-fetch");
 const decompress = require("decompress");
 const os = require("os");
 const del = require("del");
+const { spawn } = require("child_process");
 
 // Downloads and extracts the LBRY SDK
 const downloadSDK = targetPlatform =>
@@ -77,7 +78,21 @@ const downloadSDK = targetPlatform =>
           }
 
           fs.writeFileSync(sdkVersionPath, sdkVersion, "utf8");
-          resolve("Done");
+
+          let unzip = spawn('unzip',[tmpZipPath])
+          unzip.stdout.on('data',data=>console.log(`Unziping ${data}`))
+          unzip.stderr.on('data',data=>{
+            console.log('Problem with unzip',data);
+            resolve("Done")
+          });
+          unzip.on('exit',data=>{
+            console.log('Unzipped with success!')
+            resolve("Done")
+          });
+          unzip.on('error',data=>{
+            console.log('Problem with unzip',data);
+            resolve("Done")
+          });
         })
         .catch(error => {
           console.error(`\x1b[31merror\x1b[0m SDK download failed due to: \x1b[35m${error}\x1b[0m`);
