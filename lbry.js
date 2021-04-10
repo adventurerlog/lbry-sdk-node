@@ -118,6 +118,7 @@ const Lbry = {
         if (Lbry.connectPromise === null) {
             Lbry.connectPromise = new Promise((resolve, reject) => {
                 let tryNum = 0;
+                const CHECK_DAEMON_STARTED_TRY_NUMBER = 120 // 1 minute
                 // Check every half second to see if the daemon is accepting connections
                 function checkDaemonStarted() {
                     tryNum += 1;
