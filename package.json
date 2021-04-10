@@ -1,6 +1,6 @@
 {
   "name": "lbry-sdk-node",
-  "version": "0.1.2",
+  "version": "0.1.8",
   "description": "download and bootstrap lbryio/lbry-sdk releases in nodejs",
   "main": "index.js",
   "scripts": {
@@ -32,7 +32,7 @@
   "lbrySettings": {
     "lbrynetSDKVersion": "0.93.0",
     "lbrynetSDKUrlTemplate": "https://github.com/lbryio/lbry/releases/download/vSDKVER/lbrynet-OSNAME.zip",
-    "lbrynetSDKDir": "dist/sdk",
+    "lbrynetSDKDir": "dist",
     "lbrynetSDKFileName": "lbrynet"
   }
 }
